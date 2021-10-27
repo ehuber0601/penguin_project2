@@ -11,11 +11,11 @@ const {Schema, model} = mongoose
 const playerSchema = new Schema({
     name: String,
     img: String,
-    Position: String,
-    JerseyNumber: Number,
-    Height: String,
-    Weight: Number,
-    DominantHand: String,
+    position: String,
+    jerseyNumber: Number,
+    height: String,
+    weight: Number,
+    dominantHand: String,
 })
 
 //make the model
