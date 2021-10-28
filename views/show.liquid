@@ -6,4 +6,9 @@
 Weight: {{player.weight}}
 Height: {{player.height.feet}}' {{player.height.inches}}"
 Dominant Hand: {{player.dominantHand}}
+
+<a href="/players/{{player._id}}/edit"><button>Edit Player</button></a>
+<form action="/players/{{player._id}}?_method=DELETE" method="post">
+    <input type="submit" value="DELETE">
+</form>
 {% endblock %}

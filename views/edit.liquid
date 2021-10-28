@@ -1,0 +1,14 @@
+{% layout "layout.liquid" %}
+{% block content %}
+<h1>Add a New Player</h1>
+<form action="/players/{{player._id}}?_method=PUT" method="post">
+   Name: <input type="text" name="name" value="{{player.name}}">
+   Image: <input type="text" name="img" value="{{player.img}}">
+   Poistion: <input type="text" name="position" value="{{player.position}}">
+   Jersey #: <input type="number" name="jerseyNumber"value="{{player.jerseyNumber}}">
+   Height: <input type="number" name="height[feet]"value="{{player.height.feet}}">' <input type="number" name="height[inches]" value="{{player.height.inches}}">
+   Weight: <input type="number" name="weight" value="{{player.weight}}">
+   DominantHand: Left<input type="checkbox" name="dominantHand" value="Left"> Right<input type="checkbox" name="dominantHand" value="Right">
+   <input type="submit" value="Update Player"> 
+</form>
+{% endblock %}
