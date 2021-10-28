@@ -13,7 +13,10 @@ const playerSchema = new Schema({
     img: String,
     position: String,
     jerseyNumber: Number,
-    height: String,
+    height: {
+        feet: Number,
+        inches: Number
+    },
     weight: Number,
     dominantHand: String,
 })
