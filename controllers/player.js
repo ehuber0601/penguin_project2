@@ -66,25 +66,43 @@ router.get("/seed", (req, res) => {
     ];
 
     // delete players
-    Players.deleteMany({}).then((data) => {
+    Players.deleteMany({})
+    .then((data) => {
         // seed the starter players
-        Players.create(startPlayers).then((data) => {
-            console.log(data)
-            db.close()
+        Players.create(startPlayers)
+        .then((data) => {
+            res.json(data)
         })
     })
 })
 
-// index route - get - /fruits
+// index route - get - /players
 router.get("/", (req, res) => {
-    // find all the  fruits
+    // find all the players
     Players.find({})
     .then((players) => {
         // render the index template with the fruits
-        res.render("fruits/index.liquid", {players})
+        res.render("index.liquid", {players})
     })
     // error handling
     .catch((error) => {
         res.json((error))
     })
 })
+
+// show route - get - /players/:id
+router.get("/:id", (req,res) => {
+    const id = req.params.id
+
+    // get that particular player from the databse
+    Players.findById(id)
+    .then((player) => {
+        res.render("show.liquid", {player})
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+
+module.exports= router
