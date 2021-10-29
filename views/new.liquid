@@ -1,14 +1,18 @@
 {% layout "layout.liquid" %}
 {% block content %}
-<h1>Add a New Player</h1>
-<form action="/players" method="post">
-   Name: <input type="text" name="name">
-   Image: <input type="text" name="img">
-   Poistion: <input type="text" name="position">
-   Jersey #: <input type="number" name="jerseyNumber">
-   Height: <input type="number" name="height[feet]">' <input type="number" name="height[inches]">"
-   Weight: <input type="number" name="weight">
-   DominantHand: Left<input type="checkbox" name="dominantHand" value="Left"> Right<input type="checkbox" name="dominantHand" value="Right">
-   <input type="submit" value="Add Player"> 
-</form>
+<div class="new-player">
+    <h1>Add a New Player</h1>
+    <form action="/players" method="post">
+        <ul>
+        <li>Name: <input type="text" name="name"></li>
+        <li>Image: <input type="text" name="img"></li>
+        <li>Poistion: <input type="text" name="position"></li>
+        <li>Jersey #: <input type="number" name="jerseyNumber"></li>
+        <li>Height: <input type="number" name="height[feet]" id="height"> ft <input type="number" name="height[inches]" id="height"> in</li>
+        <li>Weight: <input type="number" name="weight"></li>
+        <li>DominantHand: Left<input type="checkbox" name="dominantHand" value="Left"> Right<input type="checkbox" name="dominantHand" value="Right"></li>
+        <li><input type="submit" value="Add Player"></li>
+        </ul>
+    </form>
+</div>
 {% endblock %}

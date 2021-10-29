@@ -1,14 +1,20 @@
 {% layout "layout.liquid" %} 
 {% block content %}
-<h2>{{player.name}}</h2>
-<img src={{player.img}}>
-<p>#{{player.jerseyNumber}} | {{player.position}}</p>
-Weight: {{player.weight}}
-Height: {{player.height.feet}}' {{player.height.inches}}"
-Dominant Hand: {{player.dominantHand}}
-
-<a href="/players/{{player._id}}/edit"><button>Edit Player</button></a>
-<form action="/players/{{player._id}}?_method=DELETE" method="post">
-    <input type="submit" value="DELETE">
-</form>
+<div class="show-content">
+    <div class=player-info>
+        <h2>{{player.name}}</h2>
+        <img src={{player.img}}>
+        <p>#{{player.jerseyNumber}} | {{player.position}}</p>
+        Height: {{player.height.feet}}' {{player.height.inches}}" |
+        Weight: {{player.weight}} lbs<br>
+        Dominant Hand: {{player.dominantHand}}
+        <br>
+        <div id="buttons">
+            <a href="/players/{{player._id}}/edit"><button>Edit Player</button></a>
+            <form action="/players/{{player._id}}?_method=DELETE" method="post">
+                <input type="submit" value="DELETE">
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

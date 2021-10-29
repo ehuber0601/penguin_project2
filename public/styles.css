@@ -1,1 +1,94 @@
-img {height: 400px;}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+
+body{
+    background: url("https://wallpaper.dog/large/10995582.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    /* https://css-tricks.com/perfect-full-page-background-image/ */
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.items{
+    width: fit-content;
+    margin: 10px;
+    background-color: white;
+    border: 10px solid navy;
+    border-radius: 10px;
+}
+
+.show-content {
+text-align: center;
+}
+
+.player-info {
+    text-align: center;
+    color: navy;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+#buttons {
+    margin-top: 10px;
+    gap: 4px;
+    justify-content: center;
+}
+
+#player-header {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+img {
+    height: 100%;
+    width: 300px;
+
+}
+.new-player{
+    background-color: rgba(60, 77, 228, 0.4);
+    padding: 10px;
+}
+
+/* form{
+    /* width: 100%; */
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* display: block; */
+    /* border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    /* box-sizing: border-box;
+    display: block; */
+li {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+#height{
+    width: 3%;
+}

@@ -17,7 +17,7 @@ db.on("open", () => {
     const startPlayers = [
         {
             name: "Lebron James",
-            img: "https://upload.wikimedia.org/wikipedia/commons/c/cf/LeBron_James_crop.jpg",
+            img: "https://a.espncdn.com/i/headshots/nba/players/full/1966.png",
             position: "Small Forward",
             jerseyNumber: 6,
             height: {
@@ -53,7 +53,7 @@ db.on("open", () => {
         },
         {
             name: "Stephen Curry",
-            img: "https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-images/003/837/262/hi-res-898820109b89ef00942b098ff10379b6_crop_north.jpg",
+            img: "https://a.espncdn.com/i/headshots/nba/players/full/3975.png",
             position: "Point Guard",
             jerseyNumber: 30,
             height: {

@@ -12,8 +12,10 @@
     <div class="container">
         {% for player in players %}
         <div class="items">
-        <h3>{{player.name}}</h3>
-        <a href="/players/{{player._id}}"><img src={{player.img}}></a>
+            <div id="player-header">
+                <h2>{{player.name}}</h2>
+            </div>
+            <a href="/players/{{player._id}}"><img src={{player.img}}></a>
         </div>
         {% endfor %}
     </div>
