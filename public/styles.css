@@ -13,16 +13,16 @@ body{
     color: white;
 }
 
-header {
+/* header {
     display: flex;
     justify-content: space-between;
-}
+} */
 
-a {
+/* a {
     text-decoration: none;
     color: white;
     
-}
+} */
 
 .container {
     margin-top: 30px;
@@ -90,5 +90,5 @@ li {
 }
 
 #height{
-    width: 3%;
+    width: 5%;
 }

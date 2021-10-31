@@ -96,7 +96,7 @@ router.get("/", (req, res) => {
     // find all the players
     Players.find({})
     .then((players) => {
-        // render the index template with the fruits
+        // render the index template with the players
         res.render("index.liquid", {players})
     })
     // error handling
@@ -104,6 +104,8 @@ router.get("/", (req, res) => {
         res.json((error))
     })
 })
+
+
 
 // new route - get request - /players/new
 router.get("/new", (req, res) => {

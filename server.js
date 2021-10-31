@@ -25,7 +25,7 @@ app.use(express.static("public"))
 
 // route
 app.get("/", (req, res) => {
-    res.render("index.liquid")
+    res.redirect("/players")
 })
 
 // Register Players Router
